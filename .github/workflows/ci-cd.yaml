@@ -25,7 +25,7 @@ jobs:
       run: dotnet build --no-restore
 
     - id: test
-      if: steps.build.outcome = 'failed'
+      if: steps.build.outcome = 'success'
       name: Test
-      run:
+      run: dotnet build --no-restore
 
